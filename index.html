@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustPoll Application</title>
+    <script src="main.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.1.umd.min.js" type="application/javascript"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+        }
+
+        .navbar {
+            background-color: rgb(32, 27, 26);
+            height: 35px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+        }
+
+        li a {
+            font-size: 18px;
+            margin: 5px;
+            padding: 0px 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .mains {
+            overflow: hidden;
+            background-color: #2F5168;
+            height: 25px;
+            border: 2px solid gray;
+            padding: 1.2em 0;
+            font-size: 1.5em;
+            font-family: "Agency FB";
+            color: #E4F6F8;
+            white-space: nowrap;
+        }
+
+        .slide-right p {
+            animation: slide-right 30s linear infinite;
+            margin: 0;
+        }
+
+        @keyframes slide-right {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .welcome {
+            margin: 25px;
+            text-align: center;
+        }
+
+        .welcome h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .welcome p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .container input
+        {
+            padding: 0px 0px 0px 50px;
+
+        }
+        .container input,
+        .container button {
+            margin: 10px 0;
+            width: 300px;
+            height: 40px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .connect {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .connect button {
+            background-color: rgb(88, 217, 88);
+            width: 250px;
+            height: 40px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 25px;
+            color: #fff;
+            cursor: pointer;
+        }
+        #myTable {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        }
+
+        #myTable th,
+        #myTable td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        }
+
+        #myTable th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        }
+		button{
+			background-color: rgb(88, 217, 88);
+            width: 250px;
+            height: 40px;
+            border-radius: 20px;
+            font-weight: bold;
+            /* margin: 25px; */
+            color: #fff;
+            cursor: pointer;
+		}
+    </style>
+</head>
+<body>
+    <!-- <div class="nav">
+        <nav class="navbar">
+            <ul>
+                <li class="link"><a href="vote.html">Vote</a></li>
+                <li class="link"><a href="ListVoter.html">ListVoter</a></li>
+            </ul>
+        </nav> -->
+    </div>
+    <div class="mains">
+        <div class="slide-right">
+            <p>Voting Is Live! Secure Your Future! By TrustPoll ....</p>
+        </div>
+    </div>
+    <div class="welcome">
+        <h1>Welcome to TrustPoll</h1>
+        <p>The Decentralized Voting Application</p>
+    </div>
+    <div class="connect">
+        <button onclick="connectMetamask()">Connect Metamask</button>
+        <p id="metamasknotification"></p>
+    </div>
+<div class="votes">
+    <div class="container">
+        <label for="vote" style="margin-bottom: 10px;">Vote here</label>
+        <input type="number" id="vote" placeholder="Add Index of the Voter ... ">
+        <button onclick="addVote()">Add Vote</button>
+        <p id="cand"></p>
+        <button onclick="voteStatus()">Check Voting Status</button>
+        <p id="status"></p>
+        <p id="time"></p>
+    </div>
+</div>
+<!-- 
+<div>
+    <button onclick="getAll()">List All Candidates</button>
+    <p id="p3"></p>
+</div>
+
+<div>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Candidate name</th>
+                <th>Candidate votes</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div> -->
+</body>
+</html>

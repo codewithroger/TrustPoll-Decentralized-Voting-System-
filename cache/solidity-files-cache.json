@@ -1,0 +1,75 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\Block\\contracts\\Voting.sol": {
+      "lastModificationDate": 1712380879303,
+      "contentHash": "4aff91baccbb944bed7ec61a925bba0f",
+      "sourceName": "contracts/Voting.sol",
+      "solcConfig": {
+        "version": "0.8.11",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Voting"
+      ]
+    },
+    "C:\\xampp\\htdocs\\TrustPoll\\Block\\contracts\\Voting.sol": {
+      "lastModificationDate": 1713617086250,
+      "contentHash": "f2cc53d3528e8e7acdcfd67829d15075",
+      "sourceName": "contracts/Voting.sol",
+      "solcConfig": {
+        "version": "0.8.11",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Voting"
+      ]
+    }
+  }
+}
